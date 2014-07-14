@@ -21,6 +21,9 @@
 		F192F04119739A5700EEBF7A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F192F02319739A5700EEBF7A /* UIKit.framework */; };
 		F192F04919739A5700EEBF7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F192F04719739A5700EEBF7A /* InfoPlist.strings */; };
 		F192F04B19739A5700EEBF7A /* CustomFaceKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F192F04A19739A5700EEBF7A /* CustomFaceKeyboardTests.m */; };
+		F192F0571973A94500EEBF7A /* FaceBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F192F0561973A94500EEBF7A /* FaceBoardView.m */; };
+		F192F05C1973B23400EEBF7A /* expression_on.png in Resources */ = {isa = PBXBuildFile; fileRef = F192F05A1973B23400EEBF7A /* expression_on.png */; };
+		F192F05D1973B23400EEBF7A /* expression.png in Resources */ = {isa = PBXBuildFile; fileRef = F192F05B1973B23400EEBF7A /* expression.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		F192F04619739A5700EEBF7A /* CustomFaceKeyboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomFaceKeyboardTests-Info.plist"; sourceTree = "<group>"; };
 		F192F04819739A5700EEBF7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F192F04A19739A5700EEBF7A /* CustomFaceKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomFaceKeyboardTests.m; sourceTree = "<group>"; };
+		F192F0551973A94500EEBF7A /* FaceBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBoardView.h; sourceTree = "<group>"; };
+		F192F0561973A94500EEBF7A /* FaceBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBoardView.m; sourceTree = "<group>"; };
+		F192F0581973AB5400EEBF7A /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		F192F05A1973B23400EEBF7A /* expression_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expression_on.png; sourceTree = "<group>"; };
+		F192F05B1973B23400EEBF7A /* expression.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expression.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +120,15 @@
 		F192F02519739A5700EEBF7A /* CustomFaceKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F192F0541973A49D00EEBF7A /* FaceBoard */,
 				F192F02E19739A5700EEBF7A /* AppDelegate.h */,
 				F192F02F19739A5700EEBF7A /* AppDelegate.m */,
 				F192F03119739A5700EEBF7A /* Main.storyboard */,
 				F192F03419739A5700EEBF7A /* ViewController.h */,
 				F192F03519739A5700EEBF7A /* ViewController.m */,
+				F192F0581973AB5400EEBF7A /* Defines.h */,
 				F192F03719739A5700EEBF7A /* Images.xcassets */,
+				F192F0591973B22E00EEBF7A /* images */,
 				F192F02619739A5700EEBF7A /* Supporting Files */,
 			);
 			path = CustomFaceKeyboard;
@@ -150,6 +161,24 @@
 				F192F04719739A5700EEBF7A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F192F0541973A49D00EEBF7A /* FaceBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F192F0551973A94500EEBF7A /* FaceBoardView.h */,
+				F192F0561973A94500EEBF7A /* FaceBoardView.m */,
+			);
+			path = FaceBoard;
+			sourceTree = "<group>";
+		};
+		F192F0591973B22E00EEBF7A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F192F05A1973B23400EEBF7A /* expression_on.png */,
+				F192F05B1973B23400EEBF7A /* expression.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F192F05C1973B23400EEBF7A /* expression_on.png in Resources */,
 				F192F03819739A5700EEBF7A /* Images.xcassets in Resources */,
 				F192F02A19739A5700EEBF7A /* InfoPlist.strings in Resources */,
+				F192F05D1973B23400EEBF7A /* expression.png in Resources */,
 				F192F03319739A5700EEBF7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F192F0571973A94500EEBF7A /* FaceBoardView.m in Sources */,
 				F192F03619739A5700EEBF7A /* ViewController.m in Sources */,
 				F192F03019739A5700EEBF7A /* AppDelegate.m in Sources */,
 				F192F02C19739A5700EEBF7A /* main.m in Sources */,

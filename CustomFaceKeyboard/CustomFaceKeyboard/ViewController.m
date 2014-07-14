@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "FaceBoardView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) FaceBoardView * faceBoardView;
 
 @end
 
@@ -17,7 +20,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self.view addSubview:self.faceBoardView];
+}
+
+
+#pragma mark - properties
+
+- (FaceBoardView *)faceBoardView{
+    if (!_faceBoardView) {
+        CGRect frame = CGRectMake(0, kSCREEN_HEIGHT - 44, kSCREEN_WIDTH, 44);
+        _faceBoardView = [[FaceBoardView alloc] initWithFrame:frame];
+        _faceBoardView.backgroundColor = [UIColor colorWithWhite:0.797 alpha:1.000];
+    }
+    return _faceBoardView;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_faceBoardView resignFaceboard];
 }
 
 - (void)didReceiveMemoryWarning
